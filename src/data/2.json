@@ -1,0 +1,102 @@
+{
+    "title": "Président",
+    "type": "date_year-string", 
+    "quiz": [
+        {
+            "date": "2002-2003",
+            "string": "Frédéric Tagnon"
+        },
+        {
+            "date": "2003-2004",
+            "string": "Jonathan Pomesse (Pommi)"
+        },
+        {
+            "date": "2004-2005",
+            "string": "John Heinderyckx (Willy le Suédois)"
+        },
+        {
+            "date": "2005-2006",
+            "string": "Jean-Yves Lequeux (Zean-Yvres)"
+        },
+        {
+            "date": "2006-2007",
+            "string": "Vincent Guerriat (Le Roux)"
+        },
+        {
+            "date": "2007-2008",
+            "string": "Emilie Baudoux (Miloo)"
+        },
+        {
+            "date": "2008-2009",
+            "string": "Vincent Cunin (Maes)"
+        },
+        {
+            "date": "2009-2010",
+            "string": "Baptiste Nollevaux (Nolle)"
+        },
+        {
+            "date": "2010-2011",
+            "string": "Jessyca Bessemans"
+        },
+        {
+            "date": "2011-2012",
+            "string": "Vincent Mouton"
+        },
+        {
+            "date": "2012-2013",
+            "string": "Loup Dardenne"
+        },
+        {
+            "date": "2013-2014",
+            "string": "Mickaël Van Hoorde"
+        },
+        {
+            "date": "2014-2015",
+            "string": "Gianni Infantino"
+        },
+        {
+            "date": "2015-2016",
+            "string": "Nicolas Duval (Lotto)"
+        },
+        {
+            "date": "2016-2017",
+            "string": "Gaëtan Armici"
+        },
+        {
+            "date": "2017-2018",
+            "string": "Simon Antoine"
+        },
+        {
+            "date": "2018-2019",
+            "string": "Guillaume Baccauw"
+        },
+        {
+            "date": "2019-2020",
+            "string": "Sébastien Tron"
+        },
+        {
+            "date": "2020-2021",
+            "string": "Jonas Hespel"
+        },
+        {
+            "date": "2021-2022",
+            "string": "Martin Guellette"
+        },
+        {
+            "date": "2022-2023",
+            "string": "Justin Rolland"
+        },
+        {
+            "date": "2023-2024",
+            "string": "Arnaud Pecheur"
+        },
+        {
+            "date": "2024-2025",
+            "string": "Victor Pire"
+        },
+        {
+            "date": "2025-2026",
+            "string": "Hugo Magerat"
+        }
+    ]
+}
