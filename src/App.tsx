@@ -4,6 +4,7 @@ import type { FC } from 'react'
 import type { QuizFile } from './types.ts'
 import { LOCALSTORAGE_LAST_QUIZ } from './types.ts'
 import QuizLoader from './components/QuizLoader.tsx'
+import TrainView from './components/TrainView.tsx'
 
 import q1 from './data/1.json'
 import q2 from './data/2.json'
@@ -35,6 +36,7 @@ export const App: FC = () => {
   const currentData = selectedIndex !== null
     ? ALL_QUIZZES[selectedIndex]
     : null
+  const [trainingMode, setTrainingMode] = useState(false)
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 p-6 dark:bg-slate-900 dark:text-slate-100">
@@ -53,8 +55,8 @@ export const App: FC = () => {
                 </div>
                 <div className="flex gap-2">
                   <button
-                    disabled
-                    className="px-3 py-1 rounded bg-slate-200 text-slate-700 text-sm dark:bg-slate-700 dark:text-slate-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-1 rounded bg-slate-200 text-slate-700 text-sm dark:bg-slate-700 dark:text-slate-200"
+                    onClick={() => { setSelectedIndex(i); setTrainingMode(true) }}
                   >
                     Read
                   </button>
@@ -77,9 +79,27 @@ export const App: FC = () => {
               >
                 ← Back
               </button>
+              <div className="ml-2 flex gap-2">
+                <button
+                  className={`px-2 py-1 rounded ${trainingMode ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}
+                  onClick={() => setTrainingMode(true)}
+                >
+                  Train
+                </button>
+                <button
+                  className={`px-2 py-1 rounded ${!trainingMode ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}
+                  onClick={() => setTrainingMode(false)}
+                >
+                  Quiz
+                </button>
+              </div>
             </div>
             <div className="bg-white p-4 rounded shadow dark:bg-slate-800">
-              <QuizLoader data={currentData!} />
+              {trainingMode ? (
+                <TrainView data={currentData!} />
+              ) : (
+                <QuizLoader data={currentData!} />
+              )}
             </div>
           </div>
         )}
