@@ -26,9 +26,9 @@ export const QuizList: FC<QuestionProps> = ({ title, question }) => {
         if (matchIndex !== -1 && !answered.includes(normalizedQuestions[matchIndex])) {
             setAnswered((a) => [...a, normalizedQuestions[matchIndex]])
             setScore((s) => s + 1)
-            setMessage('Correct!')
+            setMessage('Correct !')
         } else if (answered.includes(normalized)) {
-            setMessage('Already answered')
+            setMessage('Déjà répondu')
         } else {
             setMessage('Incorrect')
         }
@@ -36,7 +36,7 @@ export const QuizList: FC<QuestionProps> = ({ title, question }) => {
         setAnswer('')
         if (answered.length + 1 >= question.length) {
             setDone(true)
-            console.log('Quiz done')
+            console.log('Quiz terminé')
         }
     }
 
@@ -55,7 +55,7 @@ export const QuizList: FC<QuestionProps> = ({ title, question }) => {
                     {message && <div className="mb-2 text-sm text-slate-700 dark:text-slate-300">{message}</div>}
                     {answered.length > 0 && (
                         <div className="mb-2 text-sm text-green-700 dark:text-green-300">
-                            Already answered: {answered.join(', ')}
+                            Déjà répondu : {answered.join(', ')}
                         </div>
                     )}
                     <input
@@ -66,13 +66,13 @@ export const QuizList: FC<QuestionProps> = ({ title, question }) => {
                         aria-label="answer"
                     />
                     <div className="flex gap-2">
-                        <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={submit}>Submit</button>
+                        <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={submit}>Soumettre</button>
                     </div>
                 </div>
             ) : (
                 <div>
-                    <div className="text-xl font-semibold">Done</div>
-                    <div className="mt-2">Score: {score} / {question.length}</div>
+                    <div className="text-xl font-semibold">Terminé</div>
+                    <div className="mt-2">Score : {score} / {question.length}</div>
                 </div>
             )}
         </div>

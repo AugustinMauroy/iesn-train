@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import type { FC } from 'react'
 import type { QuizFile } from './types.ts'
@@ -42,8 +41,8 @@ export const App: FC = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900 p-6 dark:bg-slate-900 dark:text-slate-100">
       <div className="max-w-3xl mx-auto">
         <header className="mb-6">
-          <h1 className="text-2xl font-bold">IESN Train — Quizzes</h1>
-          <p className="text-sm text-slate-600 dark:text-slate-400">Select a quiz to start. Your last open quiz is persisted.</p>
+          <h1 className="text-2xl font-bold">IESN folkor — Quiz</h1>
+          <p className="text-sm text-slate-600 dark:text-slate-400">Sélectionnez un quiz pour commencer. Votre dernier quiz ouvert est enregistré.</p>
         </header>
 
         {selectedIndex === null ? (
@@ -58,13 +57,13 @@ export const App: FC = () => {
                     className="px-3 py-1 rounded bg-slate-200 text-slate-700 text-sm dark:bg-slate-700 dark:text-slate-200"
                     onClick={() => { setSelectedIndex(i); setTrainingMode(true) }}
                   >
-                    Read
+                    Lire
                   </button>
                   <button
                     className="px-3 py-1 rounded bg-indigo-600 text-white text-sm"
                     onClick={() => setSelectedIndex(i)}
                   >
-                    Open
+                    Ouvrir
                   </button>
                 </div>
               </div>
@@ -77,14 +76,14 @@ export const App: FC = () => {
                 className="px-2 py-1 rounded bg-slate-200 text-slate-700 text-sm dark:bg-slate-700 dark:text-slate-200"
                 onClick={() => setSelectedIndex(null)}
               >
-                ← Back
+                ← Retour
               </button>
               <div className="ml-2 flex gap-2">
                 <button
                   className={`px-2 py-1 rounded ${trainingMode ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}
                   onClick={() => setTrainingMode(true)}
                 >
-                  Train
+                  Entraînement
                 </button>
                 <button
                   className={`px-2 py-1 rounded ${!trainingMode ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}

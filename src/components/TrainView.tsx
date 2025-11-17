@@ -14,6 +14,7 @@ export const TrainView: FC<Props> = ({ data }) => {
   const [revealed, setRevealed] = useState<Record<number, boolean>>({})
 
   const items = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (shuffleOn) return shuffle<any>(data.quiz as any)
     return data.quiz
   }, [data, shuffleOn])
@@ -24,14 +25,14 @@ export const TrainView: FC<Props> = ({ data }) => {
 
   return (
     <div className="p-4">
-      <h3 className="text-lg font-medium mb-2">{data.title} — Training</h3>
+      <h3 className="text-lg font-medium mb-2">{data.title} — Entraînement</h3>
       <div className="mb-3 flex items-center gap-2">
-        <label className="text-sm text-slate-600 dark:text-slate-400">Shuffle</label>
+        <label className="text-sm text-slate-600 dark:text-slate-400">Mélanger</label>
         <button
           className={`px-2 py-1 rounded ${shuffleOn ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}
           onClick={() => setShuffleOn((s) => !s)}
         >
-          {shuffleOn ? 'On' : 'Off'}
+          {shuffleOn ? 'Activé' : 'Désactivé'}
         </button>
 
         <div className="ml-4">
@@ -39,7 +40,7 @@ export const TrainView: FC<Props> = ({ data }) => {
             className={`px-2 py-1 rounded ${showAnswers ? 'bg-indigo-600 text-white' : 'bg-slate-200 dark:bg-slate-700 dark:text-slate-200'}`}
             onClick={() => setShowAnswers((s) => !s)}
           >
-            {showAnswers ? 'Hide answers' : 'Show answers'}
+            {showAnswers ? 'Masquer les réponses' : 'Afficher les réponses'}
           </button>
         </div>
       </div>
@@ -68,7 +69,7 @@ export const TrainView: FC<Props> = ({ data }) => {
                 {!showAnswers && (
                 <div className="mt-2">
                   <button className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700" onClick={() => toggleReveal(i)}>
-                    {revealed[i] ? 'Hide' : 'Reveal'}
+                    {revealed[i] ? 'Masquer' : 'Révéler'}
                   </button>
                 </div>
                 )}
@@ -82,7 +83,7 @@ export const TrainView: FC<Props> = ({ data }) => {
             {(items as { date: string; string: string }[]).map((q, i) => (
               <div key={i} className="p-3 bg-slate-50 dark:bg-slate-900 rounded border border-slate-100 dark:border-slate-800">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Text</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Texte</div>
                   <div className="font-medium">{q.string}</div>
                 </div>
                 <div className="mt-2 flex items-center justify-between">
@@ -92,7 +93,7 @@ export const TrainView: FC<Props> = ({ data }) => {
                 {!showAnswers && (
                 <div className="mt-2">
                   <button className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700" onClick={() => toggleReveal(i)}>
-                    {revealed[i] ? 'Hide' : 'Reveal'}
+                    {revealed[i] ? 'Masquer' : 'Révéler'}
                   </button>
                 </div>
                 )}

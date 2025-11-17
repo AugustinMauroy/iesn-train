@@ -40,13 +40,13 @@ export const QuizStringString: FC<QuestionProps> = ({ title, question }) => {
                     className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 dark:text-slate-200"
                     onClick={() => setFlip((f) => !f)}
                 >
-                    Swap direction
+                    Changer de direction
                 </button> :
                 <button
                     className="px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 dark:text-slate-200"
                     onClick={() => reset()}
                 >
-                    Re-do
+                    Recommencer
                 </button>
                 }
             </div>
@@ -62,13 +62,13 @@ export const QuizStringString: FC<QuestionProps> = ({ title, question }) => {
                         onKeyDown={(e) => e.key === 'Enter' && submit()}
                     />
                     <div className="flex gap-2">
-                        <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={submit}>Submit</button>
+                        <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={submit}>Soumettre</button>
                     </div>
                 </div>
             ) : (
                 <div>
-                    <div className="text-xl font-semibold">Done</div>
-                    <div className="mt-2">Score: {score} / {question.length}</div>
+                    <div className="text-xl font-semibold">Terminé</div>
+                    <div className="mt-2">Score : {score} / {question.length}</div>
                 </div>
             )}
         </div>
