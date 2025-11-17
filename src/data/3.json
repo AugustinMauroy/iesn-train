@@ -1,13 +1,13 @@
 {
-    "title": "Fondateurs",
-    "type": "list",
-    "quiz": [
-        "Frédéric Tanion",
-        "Jean François keyser",
-        "Jean François Martin (praline)",
-        "Feu Laurent Schockert (Schoky)",
-        "Gaylord Rouquine",
-        "Denis Bertrand (vieux Den)",
-        "Jonathan Pomesse (pommi)"
-    ]
+  "title": "Fondateurs",
+  "type": "list",
+  "quiz": [
+    "Frédéric Tanion",
+    "Jean François keyser",
+    "Jean François Martin (praline)",
+    "Feu Laurent Schockert (Schoky)",
+    "Gaylord Rouquine",
+    "Denis Bertrand (vieux Den)",
+    "Jonathan Pomesse (pommi)"
+  ]
 }
